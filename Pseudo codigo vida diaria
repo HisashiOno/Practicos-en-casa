@@ -1,0 +1,28 @@
+Algoritmo GenerarQR_BancaMovil
+    Escribir "Abrir la aplicación de banca móvil"
+    Escribir "Ingresar usuario:"
+    Leer Usuario
+    Escribir "Ingresar contraseña:"
+    Leer Contraseña
+    Escribir "Iniciando sesión con usuario y contraseña"
+    Segun Usuario
+			Caso UsuarioVálido:
+            Escribir "Seleccionar cuenta preferencial"
+            Escribir "Navegar a la sección de generación de QR"
+            Escribir "Seleccionar la opción para cobrar mediante QR"
+            Si UsuarioTieneCuentaPreferencial Entonces
+                Escribir "Ingresar monto:"
+                Leer monto
+                Escribir "Ingresar concepto u otros detalles necesarios:"
+                Leer concepto
+                Escribir "Confirmar y revisar la información ingresada"
+                Escribir "Generar el QR y visualizarlo en la pantalla"
+            Sino
+                Escribir "El usuario no tiene una cuenta preferencial configurada."
+            Fin Si
+			Caso ContraseñaIncorrecta:
+            Escribir "Contraseña incorrecta. Vuelva a intentarlo."
+        Caso Otro:
+            Escribir "Usuario no válido. Verifique sus credenciales."
+    Fin Segun
+FinAlgoritmo
